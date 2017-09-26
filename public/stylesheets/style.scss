@@ -1,0 +1,148 @@
+html,body{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding:0;
+  margin: 0;
+  font-size: 16px;
+}
+
+.gif{
+  height: 25%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.board{
+  box-sizing: border-box;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  &.topVideo{
+    width: 100%;
+    height: auto;
+    video{
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      height: auto;
+      margin: auto;
+      padding: 0;
+      background-color: #aaaaaa;
+    }
+  }
+  .pice{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    transition: opacity 1s ease;
+    opacity: 0;
+    &.active{
+      opacity: 1;
+    }
+  }
+  .copyright{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+#searchBox{
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+}
+#wrapper{
+  position:relative
+}
+
+
+#searchBox {
+  //overflow: auto;
+  p:nth-child(1){
+    font-size: 2rem;
+    font-style: italic;
+    color: #607D8B;
+    border-bottom: 1px solid #607D8B;
+    font-weight: 900;
+    padding: .5rem 1rem;
+    margin: 0;
+  }
+  .searchInput{
+    font-size: 1.2rem;
+    border: 1px solid grey;
+    padding: .5rem .2rem;
+    color: #666;
+    border-radius: 5px;
+    margin: 1rem 10%;
+    width: 80%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .doSearch{
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    text-align: center;
+    border: 1px solid grey;
+    padding: .2rem 1rem;
+    color: #666;
+    background: #eee;
+    border-radius: 5px;
+    margin: 1rem 10%;
+    width: 80%;
+  }
+  .steps{
+    min-height: 20vh;
+    width: 90%;
+    margin: auto;
+    .step{
+      width: 90%;
+      box-sizing: border-box;
+      border-bottom: 1px solid #ccc;
+      margin: 1rem 0;
+      position: absolute;
+      transition: opacity .3s ease;
+      opacity: 0;
+      &.active{
+        opacity: 1;
+      }
+      .word{
+        font-weight: 900;
+        font-size: 1.5rem;
+        float: left;
+        display: block;
+      }
+      .desc{
+        display: block;
+        float: left;
+        width: 100%;
+        font-style: italic;
+        font-size: .75rem;
+        color: #666;
+      }
+      .img{
+        margin: .5rem 5px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.copyright{
+  color: #666;
+  p{
+    width: 100%;
+  }
+}

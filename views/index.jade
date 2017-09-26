@@ -1,0 +1,53 @@
+extends layout
+
+block content
+
+  #frame.frame
+    video#video.topVideo.board.video-js.vjs-default-skin.vjs-big-play-centered(
+      controls
+      autobuffer
+      poster='http://bucket-3.oss-cn-shanghai.aliyuncs.com/baia726/poster.jpg'
+      preload="metadata"
+      data-setup='{"example_option":true}'
+      webkit-playsinline="true"
+      playsinline="true"
+      x-webkit-airplay="allow"
+      x5-video-player-type="h5"
+      x5-video-player-fullscreen="true"
+      x5-video-orientation="landscape"
+    )
+      source(src='http://bucket-3.oss-cn-shanghai.aliyuncs.com/media1.mp4' type='video/mp4')
+      //source(src='http://sayhello.cases.chenkuan.cc/images/media1.mp4' type='video/mp4')
+    .board#question
+      .pice.active(style='background-image: url(http://bucket-3.oss-cn-shanghai.aliyuncs.com/baia726/1.jpg)')
+      .pice(style='background-image: url(http://bucket-3.oss-cn-shanghai.aliyuncs.com/baia726/2.jpg)')
+      .pice(style='background-image: url(http://bucket-3.oss-cn-shanghai.aliyuncs.com/baia726/3.jpg)')
+    .board(style='background-image: url(http://bucket-3.oss-cn-shanghai.aliyuncs.com/baia726/4.jpg)')
+    .board(style='background-image: url(http://bucket-3.oss-cn-shanghai.aliyuncs.com/baia726/5.jpg)')
+    .board#anwser
+      .pice
+        .gif(style='background-image: url(http://bucket-3.oss-cn-shanghai.aliyuncs.com/baia726/g1.gif)')
+        .gif(style='background-image: url(http://bucket-3.oss-cn-shanghai.aliyuncs.com/baia726/g2.gif)')
+        .gif(style='background-image: url(http://bucket-3.oss-cn-shanghai.aliyuncs.com/baia726/g3.gif)')
+        .gif(style='background-image: url(http://bucket-3.oss-cn-shanghai.aliyuncs.com/baia726/g4.gif)')
+      .pice
+        .gif(style='background-image: url(http://bucket-3.oss-cn-shanghai.aliyuncs.com/baia726/g5.gif)')
+        .gif(style='background-image: url(http://bucket-3.oss-cn-shanghai.aliyuncs.com/baia726/g6.gif)')
+        .gif(style='background-image: url(http://bucket-3.oss-cn-shanghai.aliyuncs.com/baia726/g7.gif)')
+        .gif(style='background-image: url(http://bucket-3.oss-cn-shanghai.aliyuncs.com/baia726/g8.gif)')
+      .pice
+        .gif(style='background-image: url(http://bucket-3.oss-cn-shanghai.aliyuncs.com/baia726/g9.gif)')
+        .gif(style='background-image: url(http://bucket-3.oss-cn-shanghai.aliyuncs.com/baia726/g10.gif)')
+        .gif(style='background-image: url(http://bucket-3.oss-cn-shanghai.aliyuncs.com/baia726/g11.gif)')
+        .gif(style='background-image: url(http://bucket-3.oss-cn-shanghai.aliyuncs.com/baia726/g12.gif)')
+    #searchBox.board
+      p 手语查询小工具
+      input.searchInput(placeholder='输入要查询的手语')
+      button.doSearch 查询
+      .steps
+    .board
+      .copyright
+        p(style='font-size:1.2rem') 特别鸣谢
+        p(style='font-size:.75rem') 手语查询接口提供：https://www.51240.com
+        p(style='font-size:.75rem') 手语图片引用：www.46ps.com <br> www.gettyimages.com
+        p(style='font-size:.75rem') 视频来源：截取自听障大学生自主创作微电影《声边》
